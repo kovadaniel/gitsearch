@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap');
+
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+#users-page{
+  max-width: 470px;
+  margin: 30px auto 0;
+}
+
+.user-list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.user-item{
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.user-item > a{
+  text-decoration: none;
+  color: black;
+}
+
+.user-filter{
+  display: flex;
+  justify-content: space-between;
+}
+
+#user-page{
+  display: flex;
+  flex-direction: column;
+  max-width: 470px;
+  margin: 30px auto 0;
+}
+
+.user-title{
+  margin-bottom: 0;
+}
+.description{
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+
+.user-name{
+  margin: 0;
+  font-weight: 400;
+}
+.user-img{
+  width: 100%;
+}
+.back-button{
+  padding: 5px 15px;
+  border: 1px solid teal;
+  border-radius: 3px;
+  text-decoration: none;
+  color: black;
+  max-width: 70px;
+
+  float: left;
+  margin-bottom: 5px;
+}

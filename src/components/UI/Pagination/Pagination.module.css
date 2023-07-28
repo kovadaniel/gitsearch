@@ -1,0 +1,43 @@
+.pagination{
+    display: flex;
+    justify-content: left;
+    margin: 5px 0;
+    max-width: 200px;
+}
+
+.page{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    color: teal;
+    border: 1px solid teal;
+    box-shadow: 1px 1px 2px teal;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.page:active{
+    color: darkslategray;
+    /*border: 1px solid darkslategray;*/
+    background-color: #ddd;
+
+}
+
+.active{
+    color: darkslategray;
+    /*border: 2px solid darkslategray;*/
+    background-color: #ddd;
+}
+
+.dots{
+    display: flex;
+    align-items: end;
+
+    color: teal;
+    font-size: 20px;
+    margin: 0 2px;
+    line-height: .9;
+    
+}

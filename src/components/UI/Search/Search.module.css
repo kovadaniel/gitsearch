@@ -1,0 +1,12 @@
+.input{
+    min-width: 300px;
+    padding: 7px 14px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid teal;
+    box-shadow: 1px 1px 2px teal;
+
+    border-radius: 0;
+    outline: none;
+}
