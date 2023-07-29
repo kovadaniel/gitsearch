@@ -35,8 +35,12 @@ export default function usePagination(page: number, totalPages: number){
             pagesArray.push(i);
         }
         
-        const isPagesBefore:boolean = pagesArray[0] !== 1;
-        const isPagesAfter:boolean = pagesArray[pagesArray.length-1] !== totalPages
+        // if the first page to be showed in pagination is 1 or there are no 
+        //  pages all of (as no results)=> no '...' before page numbers
+        const isPagesBefore:boolean = (pagesArray[0] !== 1 || pagesArray.length) ? false : true;
+        // if the last page to be showed in pagination is the last one that exists
+        // or there are no pages at all => no '...' after page numbers
+        const isPagesAfter:boolean = (pagesArray[pagesArray.length-1]|| pagesArray.length) !== totalPages
 
         return {pages: pagesArray, isPagesBefore, isPagesAfter};
     }, [totalPages, page]);
