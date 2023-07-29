@@ -43,12 +43,6 @@ const Users: FC = () => {
         setTotalPages(getPagesCount(usersCount, amoutOfUsersOnPage));
     }, [users])
 
-    if(error){
-        return <h1 className='no-users-error'>
-            Произошла ошибка: {error}
-        </h1>
-    }
-
     return (
         <div id='users-page' data-testid='users-page'>
             <UserFilter
@@ -58,6 +52,7 @@ const Users: FC = () => {
             {users 
             && <UserList 
                 loading={loading} 
+                error={error}
                 users={users}
             />}
             <Pagination 

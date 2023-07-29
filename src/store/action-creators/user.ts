@@ -3,8 +3,7 @@ import { GitHubAPIResponse, IUser, SingleUserAction, SingleUserActionTypes, User
 import { Dispatch } from "react"
 import { amoutOfUsersOnPage } from "../../constants";
 
-const username = 'kovadaniel';
-const password = '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'
+const token = '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';
 
 export function fetchUsers(filter:UserFilterType, page = 1) {
     return async(dispatch: Dispatch<UserAction>) => {
@@ -16,9 +15,8 @@ export function fetchUsers(filter:UserFilterType, page = 1) {
             
             // if user has already entered some text in search input
             const response = await axios.get<GitHubAPIResponse>('https://api.github.com/search/users', {
-                auth: {
-                    username: username,
-                    password: password,
+                headers: {
+                    'Authorization': `token ${token}` 
                 },
                 params: {
                     q: filter.query + ' in:login type:user',
